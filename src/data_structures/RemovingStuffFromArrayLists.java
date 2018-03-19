@@ -25,11 +25,15 @@ public class RemovingStuffFromArrayLists {
 		stuffIFoundInTheYard.add(new Worm());
 		stuffIFoundInTheYard.add(new Dirt());
 
-		System.out.println(stuffIFoundInTheYard.size());
+		System.out.println("How many objects are in the yard originaly: " + stuffIFoundInTheYard.size());
 
 		/* TODO 1: Clean out the dirt but keep the delicious worms. */
-
-		System.out.println(stuffIFoundInTheYard.size()); // should be 2
+		for (int i = 0; i < stuffIFoundInTheYard.size(); i++) {
+			if (stuffIFoundInTheYard.get(i) instanceof Dirt) {
+				stuffIFoundInTheYard.remove(i);
+			}
+		}
+		System.out.println("How many objects are remaining in the yard: " + stuffIFoundInTheYard.size()); // should be 2
 
 		ArrayList<Character> truth = new ArrayList<Character>();
 		truth.add('#');
